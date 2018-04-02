@@ -11,12 +11,7 @@ nav {
 nav, .dark, .wrapper-social, .container {
 	background: #007f00;
 }
-#logo {
-	height: 45px;
-	width: auto;
-	margin-left:11%;
-	margin-top: 1%;
-}
+
 
 
 
@@ -55,10 +50,11 @@ a.nav-link:hover {
 	height: 50%;
 }
 
-
-footer {
+/*
+footer.homefooter {
 	padding-top: 10px;
 }
+*/
 div[class^="col-"] {
 	position: relative;
 }
@@ -104,19 +100,20 @@ div.well {
 	background-size: cover;
 }
 
-/*  Footer   */
+/*  Footer  
 
-footer {
+footer.homefooter {
 	width: 90%;
 	position:relative;
 padding-top: 5vh;
 margin: 0 auto;
 }
 
-footer {
+footer.homefooter {
 	display: flex;
 	justify-content: space-between;
 }
+*/
 
 /*About*/
 
@@ -242,16 +239,7 @@ div.well {
 	color: black;
 }
 
-.bp {
-	width: 55%;
-	margin-top: 15vh;
-	transform: rotate(360deg);
-	-webkit-transform-origin: 50% 50%;
--moz-transform-origin: 50% 50%;
--o-transform-origin: 50% 50%;
-transform-origin: 50% 50%;
-	animation: roll 25s infinite;
-}
+
 
 @keyframes roll {
   0% {

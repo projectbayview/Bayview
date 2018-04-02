@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="bp_styles.css" rel="stylesheet"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+<img src="appointment.png" class="about" alt="Appointments"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+<link href='https://fonts.googleapis.com/css?family=Merienda' rel='stylesheet'>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+</head>
+<body background="background.png">
+<header>
+<div class='slider'>
+  <div class='slide7'></div>
+  <div class='slide8'></div>
+  <div class='slide9'></div>
+</div>
+<ul class="block-menu">
+	<li><a href="bp_home.html" class="three-d">
+		Home
+		<span aria-hidden="true" class="three-d-box">
+			<span class="front">Home</span>
+			<span class="back">Home</span>
+		</span>
+	</a></li>
+	<li><a href="About.html" class="three-d">
+		About Us
+		<span aria-hidden="true" class="three-d-box">
+			<span class="front">About Us</span>
+			<span class="back">About Us</span>
+		</span>
+	</a></li>
+	<li><a href="socialMedia.html" class="three-d">
+		Social Media
+		<span aria-hidden="true" class="three-d-box">
+			<span class="front">Social Media</span>
+			<span class="back">Social Media</span>
+		</span>
+	</a></li>	
+	<li><a href="bp_appointments.html" class="three-d">
+		Appointments
+		<span aria-hidden="true" class="three-d-box">
+			<span class="front">Appointments</span>
+			<span class="back">Appointments</span>
+		</span>
+	</a></li>
+	<li><a href="bp_links.html" class="three-d">
+		Links
+		<span aria-hidden="true" class="three-d-box">
+			<span class="front">Links</span>
+			<span class="back">Links</span>
+		</span>
+	</a></li>
+	<li><a href="bp_specials.html" class="three-d">
+		Specials
+		<span aria-hidden="true" class="three-d-box">
+			<span class="front">Specials</span>
+			<span class="back">Specials</span>
+		</span>
+	</a></li>	
+	
+</ul>
+</header>
+
+
+</body>
+<br>
+<br>
+
+
+
+<style>
+html, body {
+    margin: 0;
+    padding: 0;
+    width:100%;
+    height:100%;
+}
+body {
+    font-family:'Roboto', sans-serif;
+    font-size:20px;
+    font-weight:300;    
+}
+h1,h2,h3,h4{
+    margin: 0;
+    padding: 0;
+}
+.y-appointment-wrapper {
+    padding-left:10%;
+    padding-right: 10%;
+}
+.field-set-reset{
+    padding: 0;
+    border: 0;
+    margin: 0;
+    min-width: 0;
+}
+fieldset legend.title {
+    text-align:center;
+    font-size:36px;
+    margin-bottom:50px;
+}
+.scroll-btn {
+    width:3%;
+    height:140px;
+    display:inline-block;
+    position:relative;
+    cursor:pointer;
+}
+.scroll-btn.left{
+    margin-right:2%;
+}
+.scroll-btn.right{
+    margin-left:2%;
+}
+.scroll-img-wrap {
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+}
+
+.date-pick {
+    width:100%;
+    height:150px;
+    margin-bottom:80px;
+}
+.date-pick .date-wrapper {
+    width:88%;
+    display:inline-block;
+    height:150px;
+    vertical-align:top;
+    text-align:center;
+    margin-left: 0;
+    margin-right: 0;
+}
+.date-pick .date-scroll-container {
+    white-space:nowrap;
+    overflow-x:scroll;
+    height:150px;
+}
+.date-pick .date-scroll-container::-webkit-scrollbar {
+    display:none;
+}
+.date-wrapper input[type="radio"] {
+    box-sizing: border-box;
+    padding:0;
+    border: 0;
+    overflow: hidden;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+}
+.date-wrapper .timecell {
+    position: relative;
+    width:20%;
+    display:inline-block;
+    box-sizing:border-box;
+    height:140px;
+    cursor:pointer;
+}
+.date-wrapper .date-item{
+    display:block;
+    border:1px solid #eee;
+    padding:20px 0;
+}
+/*.timecell .fill-box {
+    border:1px solid #eee;
+    z-index:-1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}*/
+.timecell.selected .date-item{
+    border-color:#e6b6a4;
+    z-index:1;
+}
+.timecell .time-day,
+.timecell .time-date,
+.timecell .time-month,
+.timecell .time-available {
+    display:block;
+}
+
+.time-day {
+    font-size:15px;
+    line-height: 22px;
+}
+.time-date {
+    color:black;
+    font-size:40px;
+    line-height: 48px;
+}
+.selected .time-date{
+    color:#e3b6a4;
+}
+.time-month {
+    font-size:15px;
+    line-height: 22px;
+    color:#aaa;
+}
+
+.time-pick .time-slot {
+
+}
+.time-pick .time-slot.morning,
+.time-pick .time-slot.afternoon,
+.time-pick .time-slot.evening{
+    text-transform: uppercase;
+    float:left;
+    text-align:center;
+    box-sizing: border-box;
+
+}
+.time-pick .time-slot .slot-heading {
+    border-bottom:1px solid #ccc;
+    border-top: 1px solid #ccc;
+    box-sizing:border-box;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color:#f7f7f7;
+    font-weight:300;
+}
+.time-pick .time-slot.morning .slot-heading{
+    border-left:1px solid #ccc;
+}
+.time-pick .time-slot.evening .slot-heading{
+    border-right:1px solid #ccc;
+}
+.time-pick .time-slot.morning,
+.time-pick .time-slot.evening{
+    width:25%;
+}
+.time-pick .time-slot.afternoon{
+    width:50%;
+}
+.time-slot .slot input[type="radio"]{
+    box-sizing: border-box;
+    padding: 0;
+    border: 0;
+    overflow: hidden;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+}
+.time-slot .time-slice{
+    display:inline-block;
+    width:100%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    box-sizing: border-box;
+    border:1px solid #ccc;
+    font-size:15px;
+    font-weight:300;
+    margin-top:4px;
+    margin-bottom: 4px;
+    cursor:pointer;
+}
+.time-slice.selected{
+    border:1px solid #e3b6a4;
+    color:#e3b6a4;
+}
+.time-slot.afternoon .time-slice{
+    width:calc(50% - 8px);    
+}
+@media all and (min-width : 300px) and (max-width : 768px){
+    .y-appointment-wrapper{
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    legend.title {
+        font-size:20px;
+    }
+    .date-pick .date-wrapper{
+        width:100%;
+    }
+    .date-wrapper .timecell {
+        width:33%;
+    }
+    .scroll-btn {
+        display:none;
+    }
+    .time-slot {
+        width:100% !important;
+        margin-bottom:15px;
+    }
+    .time-slot .slot-heading{
+        border:1px solid #ccc;
+    }
+    .time-slot .time-slice{
+        width:100% !important;
+    }
+}
+</style>
+<body>
+ </head>
+    <body>
+            <div class="y-appointment-wrapper">
+                <div class="appointment-notification"></div>
+                <form action="">
+                    <fieldset class="field-set-reset">
+                        <legend class="title"><strong>To schedule service choose from the available dates and times below:</strong></legend>
+                        <div class="date-pick"  data-selected-id=-1>
+                            <div class="scroll-btn left">
+                                <span class="scroll-img-wrap">
+                                    <svg "20px" height="30px">
+                                        <path fill="#ccc" d="M16.1,32l3.9-3.9L7.9,16L20,3.9L16.1,0L0,16L16.1,32z M17.1,3.9L5, 16l12.1,12.1l-1.1,1.1L2.9,16L16.1,2.9L17.1,3.9z" />
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="date-wrapper">
+                                <div class="date-scroll-container">
+                                    <!--<label for="" class="timecell">
+                                        <input type="radio">
+                                        <span class="fill-box"></span>
+                                        <span class="time-day">Mon</span>
+                                        <span class="time-date">1</span>
+                                        <span class="time-month">May.</span>
+                                        <span class="time-available">5 available</span>
+                                    </label>-->
+                                </div>
+                            </div>
+                            <div class="scroll-btn right">
+                                <span class="scroll-img-wrap">
+                                    <svg width="20px" height="30px">
+                                        <path fill="#ccc" d="M3.9,0L0,3.9L12.1,16L0,28.1L3.9,32L20,16L3.9,0z M2.9,28.1L15, 16L2.9,3.9l1.1-1.1L17.1,16L3.9,29.1L2.9,28.1z"></path>
+                                    </svg>
+                                 </span>
+                            </div>
+                        </div>
+                        <div class="time-pick" data-ts-selected-id=-1>
+                            <section>
+                                <div class="time-slot morning">
+                                    <h3 class="slot-heading">morning</h3>
+                                    <div class="slot">
+                                        <label class="time-slice" for="" option-id="0">
+                                            <input type="radio">
+                                            <span>11:20a</span>
+                                        </label>
+                                        <label class="time-slice" for="" option-id="1">
+                                            <input type="radio">
+                                            <span>11:40a</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="time-slot afternoon">
+                                    <h3 class="slot-heading">afternoon</h3>
+                                    <div class="slot">
+                                        <label class="time-slice" for="" option-id="2"> 
+                                            <input type="radio">
+                                            <span>12:40p</span>
+                                        </label>
+                                        <label class="time-slice" for="" option-id="3">
+                                            <input type="radio">
+                                            <span>4:00p</span>
+                                        </label>
+                                        <label class="time-slice" for="" option-id="4">
+                                            <input type="radio">
+                                            <span>4:20p</span>
+                                        </label>
+                                        <label class="time-slice" for="" option-id="5">
+                                            <input type="radio">
+                                            <span>4:40p</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="time-slot evening">
+                                    <h3 class="slot-heading">evening</h3>
+                                    <div class="slot">
+                                        <label class="time-slice" for="" option-id="6">
+                                            <input type="radio">
+                                            <span>6:00p</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>        
+    </body>
+
+<body>
+<form action="" id="appForm">
+<br>
+<br>
+<input type="text" id="name" maxlength="25" placeholder="Enter Your Name">
+<input type="text" id="address" maxlength="60" placeholder="Enter Your Address">
+<input type="text" id="phone" maxlength="10" placeholder="Contact Information">
+<input type="text" id="alternate" maxlength="10" placeholder="Alternate Phone Number"><br>
+<input type="text" id="describe" maxlength="200" placeholder="Describe Service Needs">
+</form>
+<br>
+<button id="btnSubmit" onclick="display()">Click here to verify your entries</button>
+<input type="reset" onclick="myFunction()" value="Reset">
+<button id="btnSubmit2" onclick="display2()">Submit</button><script>
+function myFunction() {
+    document.getElementById("appForm").reset();
+}
+</script>
+</body>
+<div id="userName"></div>
+<div id="userAddress"></div>
+<div id="userPhone"></div>
+<div id="AltPhone"></div>
+<div id="ServiceNeeds"></div>
+</body>
+<script>
+function display()
+{
+var username = document.getElementById("name").value;
+var useraddress = document.getElementById("address").value;
+var userphone = document.getElementById("phone").value;
+var altphone = document.getElementById("alternate").value;
+var service = document.getElementById("describe").value;
+
+
+document.getElementById("userName").innerHTML = "1) Username: " + username;
+document.getElementById("userAddress").innerHTML = "3) Address: " + useraddress;
+document.getElementById("userPhone").innerHTML = "4) Phone Number: " + userphone;
+document.getElementById("AltPhone").innerHTML = "5) Alternate Phone Number: " + altphone;
+document.getElementById("ServiceNeeds").innerHTML = "4) Your Service Needs: " + service;
+}
+
+
+
+</script>
+
+
+<style>
+
+h1 {
+  font-size: 75px;
+  font-weight: 700;
+  font-family: 'Playfair Display', serif;
+  color: #fff;
+}
+
+a.btn {
+  display: inline-block;
+  font-family: Ostrich Sans;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  padding: 11px 30px;
+  background-color: #636363;
+  background-image: linear-gradient(to bottom,#636363,#000);
+  color: #fff;
+  text-transform: uppercase;
+}
+
+a.btn:hover {
+  background-image: linear-gradient(to bottom,#000,#000);
+}
+
+p {
+  font-family: sans-serif;
+}
+</style>
+<script>
+
+(function(doc, win, $, undefined){
+    'use strict';
+    dataInit();
+    scrollEventBinder($);
+    timeCellClickEvent($);
+    timeSliceClickEvent($);
+
+    function dataInit(){
+        var datetimes = [
+            // {
+                // "day":0,
+                // "date":0,
+                // "month":"May",
+                // "available":10
+            // }
+        ];
+        var scContainer = doc.querySelectorAll('.date-scroll-container')[0];
+        var days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
+        for(var i = 0 ; i < 30 ; i++){
+            var item = {
+                "day":days[i%7],
+                "date":i+1,
+                "month":"May",
+                "available":"10 available"
+            }
+            scContainer.appendChild(getTemplate(interpolate(i, item)));
+        }
+    }
+    function interpolate(idx, dItem){
+        return `<label option-id=${idx} class="timecell">\
+            <span class="date-item">
+                <input type="radio">\
+                <span class="fill-box"></span>\
+                <span class="time-day">${dItem.day}</span>\
+                <span class="time-date">${dItem.date}</span>\
+                <span class="time-month">${dItem.month}</span>\
+                <span class="time-available">${dItem.available}</span>\
+            </span>
+        </label>`;
+    }
+    function getTemplate(html){
+        var template = doc.createElement('template');
+        template.innerHTML = html;
+        return template.content.firstChild;
+    }
+    function scrollEventBinder($){
+        var dsc = $('.date-scroll-container')[0];
+        $('.scroll-btn.left').on('click', function(){ 
+            dsc.scrollLeft -= dsc.clientWidth;
+        });
+        $('.scroll-btn.right').on('click', function(){
+            dsc.scrollLeft += dsc.clientWidth;
+        });
+    }
+    function timeCellClickEvent($){
+        var $dp = $('.date-pick');
+        $('.timecell').click(function(){
+            var sidx = +$dp.attr('data-selected-id');
+            if(sidx !== -1){
+                $('.timecell[option-id="'+sidx+'"]').removeClass("selected");
+            }
+            $dp.attr('data-selected-id', $(this).attr("option-id"));
+            $(this).addClass('selected');
+        });
+    }
+    function timeSliceClickEvent($){
+        var $tp = $('.time-pick');
+        $('.time-slice').click(function(){
+            var tsidx = +$tp.attr('data-ts-selected-id');
+            if(tsidx !== -1){
+                $('.time-slice[option-id="'+tsidx+'"]').removeClass("selected");
+            }
+            $tp.attr('data-ts-selected-id', $(this).attr("option-id"));
+            $(this).addClass('selected');
+        });
+    }
+})(document, window, $);
+</script>
+
+
+</head>
+</body>
+<div id="logos2" class="w3-container">
+		<img class="w3-animate-zoom" src="logos.png" alt=""/>
+</div>
+<body>
+
+<ul><em>
+  <li><a class="link" href="https://www.google.com/maps/dir/''/bayview+bp/@36.9335639,-76.3148854,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x89ba90c6fdcaf149:0x638891d98219d4ac!2m2!1d-76.2448454!2d36.9335845" class="btn btn-primary">
+  <h3 style="font-family: sans-serif; font-size: 20px"><center>Address: 8595 Chesapeake Blvd, Norfolk, VA 23503 - Phone: (757) 583-1355 - Hours: Open 24 hours
+<em><strong>----- Sharon Horton - Owner & Operator</center></em></strong></h3></a></li>
+  
+</ul>
+<footer id="footer">
+<div id="div1">
+	<a href="https://www.mybpstation.com/station-finder">
+	<img id="logofoot" src="logo.png" alt="logo"/>
+	</a>
+</div>
+</footer>
+</body>
+
+
+</html>
