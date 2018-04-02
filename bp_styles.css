@@ -1,0 +1,480 @@
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #009B00;
+}
+li {
+    float: left;
+}
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+li a:hover {
+    background-color: #009B00;
+
+}
+ 		
+html, body {
+    margin: 0;
+    padding: 0;
+    width:100%;
+    height:100%;
+}
+h1,h2,h3,h4{
+    margin: 0;
+    padding: 0;
+}
+/* basic menu styles */
+.block-menu {
+	display: block;
+	background: #009B00;
+}
+
+.block-menu li {
+	display: inline-block;
+}
+
+.block-menu li a {
+	color: #fff;
+	display: block;
+	text-decoration: none;
+	font-family: 'Merienda';
+	font-smoothing: antialiased;
+	text-transform: uppercase;
+	overflow: visible;
+	line-height: 20px;
+	font-size: 24px;
+	padding: 15px 10px;
+}
+
+/* animation domination */
+.three-d {
+	perspective: 200px;
+	transition: all .07s linear;
+	position: relative;
+	cursor: pointer;
+}
+	/* complete the animation! */
+	.three-d:hover .three-d-box, 
+	.three-d:focus .three-d-box {
+		transform: translateZ(-25px) rotateX(90deg);
+	}
+
+.three-d-box {
+	transition: all .3s ease-out;
+	transform: translatez(-25px);
+	transform-style: preserve-3d;
+	pointer-events: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+/* 
+	put the "front" and "back" elements into place with CSS transforms, 
+	specifically translation and translatez
+*/
+.front {
+	transform: rotatex(0deg) translatez(25px);
+}
+
+.back {
+	transform: rotatex(-90deg) translatez(25px);
+	color: #ffe7c4;
+}
+
+.front, .back {
+	display: block;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: #009B00;
+	padding: 15px 10px;
+	color: white;
+	pointer-events: none;
+	box-sizing: border-box;
+}
+
+
+.w3-container {
+	position: absolute;
+}
+
+div.w3-container img {
+   display: block;
+   width: 100%;
+}
+
+.about, .social {
+	position: absolute;
+	top: 300px;
+	right: 0px;
+	z-index: 1;
+}
+
+
+
+#info1 {
+	display: block;
+	width: 33%;
+	height: auto;
+	top: 0%;
+	left: 0%;
+}
+
+.w3-container:hover .overlay {
+	opacity: 1;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #31CB00;
+}
+
+.text {
+  color: white;
+  font-family: 'Merienda';
+  font-size: 60px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+#logos2 {
+	display: block;
+	width: 8%;
+	height: auto;
+	top: 385px;
+	left: 5px;
+}
+#logos {
+	display: block;
+	width: 10%;
+	height: auto;
+	top: 300px;
+	left: 33.5%;
+}
+#logofoot {
+	z-index: 1;
+	display: block;
+	width: 20%;
+	height: auto;
+	top: 14%;
+	left: 15%;
+}
+#logo {
+	z-index: 1;
+	display: block;
+	width: 9%;
+	height: auto;
+	top: 14%;
+	left: 15%;
+}
+
+#logo1 {
+	z-index: 2;
+	display: block;
+	width: 9%;
+	height: auto;
+	top: 11.5%;
+	left: 6%;
+}
+
+#logo2 {
+	z-index: 1;
+	display: block;
+	width: 9%;
+	height: auto;
+	top: 12%;
+	left: 6.3%;
+}
+
+#name {
+	z-index: 3;
+	display: block;
+	width: 10%;
+	top: 15%;
+	left: 9.5%;
+}
+
+#name1 {
+	z-index: 2;
+	display: block;
+	width: 10%;
+	top: 15.3%;
+	left: 9.7%;
+}
+
+#info2 {
+	display: block;
+	width: 33%;
+	height: auto;
+	top: 0%;
+	right: 0%;
+}
+
+#info3 {
+	display: block;
+	width: 33%;
+	height: auto;
+	bottom: 0%;
+	left: 33.5%;
+}
+
+#info4 {
+	display: block;
+	width: 33%;
+	height: auto;
+	bottom: 1%;
+	left: 0%;
+}
+
+#info5 {
+	display: block;
+	width: 33%;
+	height: auto;
+	bottom: 0%;
+	right: 0%;
+}
+
+/* slide banner carousel */
+
+.slider {
+  width: 100%;
+  height: 500px;
+  margin: 0px auto;
+  position: relative;
+}
+
+.slide1,.slide2,.slide3,.slide4,.slide5,.slide6,.slide7,.slide8,.slide9,.slide10,.slide11,.slide12,.slide13,.slide14,.slide15 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.slide1 {
+  background: url(banner.png)no-repeat center;
+      background-size: cover;
+    animation:fade 8s infinite;
+-webkit-animation:fade 8s infinite;
+
+} 
+.slide2 {
+  background: url(banner2.png)no-repeat center;
+      background-size: cover;
+    animation:fade2 8s infinite;
+-webkit-animation:fade2 8s infinite;
+}
+.slide3 {
+    background: url(banner3.png)no-repeat center;
+      background-size: cover;
+    animation:fade3 8s infinite;
+-webkit-animation:fade3 8s infinite;
+}
+.slide4 {
+  background: url(social1.png)no-repeat center;
+      background-size: cover;
+    animation:fade 8s infinite;
+-webkit-animation:fade 8s infinite;
+} 
+.slide5 {
+  background: url(social2.png)no-repeat center;
+      background-size: cover;
+    animation:fade2 8s infinite;
+-webkit-animation:fade2 8s infinite;
+}
+.slide6 {
+  background: url(social4.png)no-repeat center;
+      background-size: cover;
+    animation:fade3 8s infinite;
+-webkit-animation:fade3 8s infinite;
+}
+.slide7 {
+  background: url(appointments.jpg)no-repeat center;
+      background-size: cover;
+    animation:fade 8s infinite;
+-webkit-animation:fade 8s infinite;
+} 
+.slide8 {
+  background: url(appointments2.jpg)no-repeat center;
+      background-size: cover;
+    animation:fade2 8s infinite;
+-webkit-animation:fade2 8s infinite;
+}
+.slide9 {
+  background: url(appointments3.png)no-repeat center;
+      background-size: cover;
+    animation:fade3 8s infinite;
+-webkit-animation:fade3 8s infinite;
+}
+.slide10 {
+  background: url(specials.png)no-repeat center;
+      background-size: cover;
+    animation:fade 8s infinite;
+-webkit-animation:fade 8s infinite;
+} 
+.slide11 {
+  background: url(specials2.png)no-repeat center;
+      background-size: cover;
+    animation:fade2 8s infinite;
+-webkit-animation:fade2 8s infinite;
+}
+.slide12 {
+  background: url(specials3.png)no-repeat center;
+      background-size: cover;
+    animation:fade3 8s infinite;
+-webkit-animation:fade3 8s infinite;
+}
+.slide13 {
+	background: url(links.png)no-repeat center;
+	background-size: cover;
+	animation:fade 8s infinite;
+	-webkit-animation:fade 8s infinite;
+}
+.slide14 {
+  background: url(links2.png)no-repeat center;
+      background-size: cover;
+    animation:fade2 8s infinite;
+-webkit-animation:fade2 8s infinite;
+}
+.slide15 {
+  background: url(links3.jpg)no-repeat center;
+      background-size: cover;
+    animation:fade3 8s infinite;
+-webkit-animation:fade3 8s infinite;
+}
+@keyframes fade
+{
+  0%   {opacity:1}
+  33.333% { opacity: 0}
+  66.666% { opacity: 0}
+  100% { opacity: 1}
+}
+@keyframes fade2
+{
+  0%   {opacity:0}
+  33.333% { opacity: 1}
+  66.666% { opacity: 0 }
+  100% { opacity: 0}
+}
+@keyframes fade3
+{
+  0%   {opacity:0}
+  33.333% { opacity: 0}
+  66.666% { opacity: 1}
+  100% { opacity: 0}
+}
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to { 
+    -webkit-transform: rotate(360deg);
+  }
+}
+#logo, #logo1, #logo2, #logofoot img {
+    -webkit-animation-name:             rotate; 
+    -webkit-animation-duration:         10s; 
+    -webkit-animation-iteration-count:  infinite;
+    -webkit-animation-timing-function: linear;
+    }
+    
+.frame {
+	position: static;
+	right: 0px;
+}
+
+.video {
+	position: absolute;
+	top: 600px;
+	right: 380px;
+}
+	
+/* This is for appointments page */
+
+.custInformation {
+	display: block;
+	position: absolute;
+	width: 30%;
+	left: 200px;
+	color: darkgreen;
+	font-size: 30px;
+}
+#available {
+	font-family: 'Merienda';
+	font-size: 30px;
+	text-shadow: 2px 2px green;
+	color: yellow;
+}
+
+nav {
+	display: block;
+	position: absolute;
+	left: 200px;
+}
+    
+ /* rotating logo footer */
+ 
+ footer > #div1 {
+    width: 300px;
+    height: 300px;
+    position: fixed;
+    -webkit-animation: mymove 4s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    }
+
+@keyframes mymove {
+    from {left: 0px;}
+    to {left: 95%;}
+   }
+   
+#footer {
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	height: 75px;
+	padding: 0.25em;
+	width: 100%;
+	text-align: center;
+	color: white;
+}
+/*table for appointments*/
+table {
+	padding: 25px 0px;
+}
+
+#row {
+   color: rgb(186, 186, 156);
+   background-color: darkgreen;
+   font-size: 0.9em;
+   padding: 1em 0;
+   text-align: center;
+}
+//
+//  Appointment Scheduling Widget
+//
+//=========================================
+
