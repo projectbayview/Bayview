@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="bp_styles.css" rel="stylesheet"/>
+	<html lang="en">
+	<meta charset="utf-8">
+	<title>Schedule An Appointment Today!</title>
+	<link href="../css/jquery-ui.css" rel="stylesheet">
+	<img src="appointment.png" class="about" alt="Appointments"/>
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link href='https://fonts.googleapis.com/css?family=Merienda' rel='stylesheet'>
+	<style>
+	
+		form#container {
+			display: block;
+			position: absolute;
+			width: 50%;
+			border-color: yellow;
+			right: 40px;
+			padding: 10px;
+		}
+		textarea {
+	margin-top: 10px;
+	height: 100px;
+	width: 95%;
+}		legend {
+		background-color: yellow;
+		color: black;
+		padding: 5px;
+		}
+		* { box-sizing: border-box; }
+		fieldset { padding: 1em; }
+		label {
+			display: block;
+			margin: 1em 0 0 0;
+		}
+		#buttonset {
+			display: inline-block;
+			margin-top: 0.3em;
+		}
+		span label {
+			display: inline-block;
+			margin: 0; 
+		}
+		select, input[type="text"], .ui-spinner, fieldset > div > button {
+			width: 250px;
+			font-size: 1.1em;
+		}
+		.ui-buttonset .ui-button { width: 125px; }
+		input[type="text"] { padding: 0.2em; }
+		button { margin-top: 1em; }
+		.ui-selectmenu-button { margin-top: 0.2em; }
+		.ui-selectmenu-button span.ui-selectmenu-text {
+			padding: 0.2em 0 0.2em 1em;
+		}
+	</style>
+</head>
+<body background="">
+
+<header>
+<div class='slider'>
+  <div class='slide7'></div>
+  <div class='slide8'></div>
+  <div class='slide9'></div>
+</div>
+<ul class="block-menu">
+	<li><a href="bp_home.html" class="three-d">
+		Home
+		<span aria-hidden="true" class="three-d-box">
+			<span class="front">Home</span>
+			<span class="back">Home</span>
+		</span>
+	</a></li>
+	<li><a href="About.html" class="three-d">
+		About Us
+		<span aria-hidden="true" class="three-d-box">
+			<span class="front">About Us</span>
+			<span class="back">About Us</span>
+		</span>
+	</a></li>
+	<li><a href="socialMedia.html" class="three-d">
+		Social Media
+		<span aria-hidden="true" class="three-d-box">
+			<span class="front">Social Media</span>
+			<span class="back">Social Media</span>
+		</span>
+	</a></li>	
+	<li><a href="bp_appointments.html" class="three-d">
+		Appointments
+		<span aria-hidden="true" class="three-d-box">
+			<span class="front">Appointments</span>
+			<span class="back">Appointments</span>
+		</span>
+	</a></li>
+	<li><a href="bp_links.html" class="three-d">
+		Links
+		<span aria-hidden="true" class="three-d-box">
+			<span class="front">Links</span>
+			<span class="back">Links</span>
+		</span>
+	</a></li>
+	<li><a href="bp_specials.html" class="three-d">
+		Specials
+		<span aria-hidden="true" class="three-d-box">
+			<span class="front">Specials</span>
+			<span class="back">Specials</span>
+		</span>
+	</a></li>	
+	
+</ul>
+</header>
+<p id="available" align="center">We are open Monday through Saturday from 6am to 6pm</p>
+
+<div class="custInformation">
+	<p>This space can be used to provide customer information regarding what oils are used etc.</p>
+</div>
+<form id="container" method="POST" action="/path/to/server">
+	<fieldset>
+		<legend>Tell Us When Is Best For You</legend>
+		<div>
+			<label for="name">Your Name:</label>
+			<input type="text" name="name" id="name">
+		</div>
+		<div>
+			<label>What works best?</label>
+			<span id="buttonset">
+				<label for="language-en">Morning</label>
+				<input type="radio" id="language-en" name="language"
+				  value="" checked>
+				<label for="language-en">Afternoon</label>
+				<input type="radio" id="language-es" name="language" 
+				  value="es">
+			</span>
+		</div>
+		<div>
+			<label for="doctor">Type of work needed:</label>
+			<select id="type" name="doctor">
+				<option>No Preference</option>
+				<optgroup label="Maintenance">
+					<option>Oil Change</option>
+					<option>Inspection</option>
+					<option>Tune Up</option>
+					<option>Brakes</option>
+					<option>Other</option>
+				</optgroup>
+			</select>
+		</div>
+		<div>
+			<label for="date">Date:</label>
+			<input type="text" name="date" id="date">
+		</div>
+		<div>
+			<label for="email">Email:</label>
+			<input type="text" name="email" id="email">
+		</div>
+		<div>
+			<label for="days">Phone/Cell number:</label>
+			<input type="text" id="days" name="days">
+		</div>
+		<label for="commBox">Anything you'd like to let us know?</label>
+			<textarea name="custExp" id="commBox"></textarea>
+		<div>
+			<button>Make Appointment</button>
+		</div>
+	</fieldset>
+</form>
+
+</div>
+
+
+
+<script src="../js/jquery.js"></script>
+<script src="../js/jquery-ui.js"></script>
+<script src="../js/i18n/datepicker-es.js"></script>
+<script src="no-php-error.js"></script>
+
+<script>
+	$( "#buttonset" ).buttonset();
+	$( "[name='language']" ).on( "change", function() {
+		$( "#date" )
+			.datepicker( "option", $.datepicker.regional[ this.value ] );
+	});
+	$( "#type" ).selectmenu();
+	$( "#email" ).autocomplete({
+		minLength: 2,
+		source: "search.php"
+	});
+	function checkDate( date ) {
+		var isWeekday = date.getDay() > 0 && date.getDay() < 6;
+		if ( $( "#type" ).val() === "Oil Change" ) {
+			return [ isWeekday && date.getDay() != 2 ];
+		} else {
+			return [ isWeekday ];
+		}
+	};
+	$( "#date" ).datepicker({
+		beforeShowDay: checkDate
+	}).datepicker( "option", $.datepicker.regional[ "" ] );
+	$( "button" ).button({
+		icons: {
+			primary: "ui-icon-calendar"
+		}
+	});
+	$( "#days" ).spinner({ min: 1 });
+	$( "form" ).on( "submit", function( event ) {
+		var date,
+			daysValid = $( "#days" ).spinner( "isValid" );
+		
+		try {
+			date = $.datepicker.parseDate( "mm/dd/yy",
+			  $( "#date" ).val() );
+		} catch ( error ) { }
+		if ( !date ) {
+			event.preventDefault();
+			alert( "Please provide a valid date." );
+		}
+		if ( date && !checkDate( date )[ 0 ] ) {
+			event.preventDefault();
+			alert( "You cannot select Sundays for Oil Changes." );
+		}
+		if ( !daysValid ) {
+			event.preventDefault();
+			alert( "Please provide a valid number of days." );
+		}
+	});
+</script>
+
+
+<div id="logos2" class="w3-container">
+		<img class="w3-animate-zoom" src="logos.png" alt=""/>
+</div>
+
+<footer id="footer">
+
+	<div id="div1">
+	<a href="https://www.mybpstation.com/station-finder">
+	<img id="logofoot" src="logo.png" alt="logo"/>
+	</a>
+</div>
+</footer>
+</body>
+</html>
