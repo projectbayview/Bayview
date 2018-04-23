@@ -3,8 +3,6 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>BP _Home Page</title>
-<link href='https://fonts.googleapis.com/css?family=Merienda' rel='stylesheet'>
-<link href="bp_styles.css" rel="stylesheet"/>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <link rel="stylesheet" href="styles.css" />
@@ -13,77 +11,40 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </head>
 
-<body background="background.png">
-                
+<body>
+                <img src="bp-responsive.svg" id="logo" href="#" />
 
+         <nav>
+            <ul class="nav  nav-pills nav-justified">
 
-<ul class="block-menu">
-	<li><a href="bp_home.html" class="three-d">
-		Home
-		<span aria-hidden="true" class="three-d-box">
-			<span class="front">Home</span>
-			<span class="back">Home</span>
-		</span>
-	</a></li>
-	<li><a href="About.html" class="three-d">
-		About Us
-		<span aria-hidden="true" class="three-d-box">
-			<span class="front">About Us</span>
-			<span class="back">About Us</span>
-		</span>
-	</a></li>
-	<li><a href="socialMedia.html" class="three-d">
-		Social Media
-		<span aria-hidden="true" class="three-d-box">
-			<span class="front">Social Media</span>
-			<span class="back">Social Media</span>
-		</span>
-	</a></li>	
-	<li><a href="bp_appointments2.html" class="three-d">
-		Appointments
-		<span aria-hidden="true" class="three-d-box">
-			<span class="front">Appointments</span>
-			<span class="back">Appointments</span>
-		</span>
-	</a></li>
-	<li><a href="bp_links.html" class="three-d">
-		Links
-		<span aria-hidden="true" class="three-d-box">
-			<span class="front">Links</span>
-			<span class="back">Links</span>
-		</span>
-	</a></li>	
-	<li><a href="bp_specials.html" class="three-d">
-		Specials
-		<span aria-hidden="true" class="three-d-box">
-			<span class="front">Specials</span>
-			<span class="back">Specials</span>
-		</span>
-	</a></li>		
-</ul>
-
-
-        <div id="logo1" class="w3-container">
-			<img src="logo.png" alt=""/>
-		</div>
-		<div id="logo2" class="w3-container">
-			<img src="logoshadow.png" alt="BP logo"/>
-		</div>
-		<div id="name1" class="w3-container">
-			<img class="w3-animate-zoom" src="nameshadow.png" alt="Bayview"/>
-		</div>		<div id="name" class="w3-container">
-			<img class="w3-animate-zoom" src="name.png" alt="Bayview"/>
-		</div>
-
-	<main>
+              <li class="nav-item">
+              		<a class="nav-link" href="home.html">BP Bayview Home</a>
+                </li>
+              <li class="nav-item">
+               		<a class="nav-link" href="appointments.html">Appointments</a>
+              </li>
+              <li class="nav-item">
+               		<a class="nav-link" href="specials.html">Specials</a>
+              </li>
+              <li class="nav-item">
+                	<a class="nav-link" href="aboutus.html">About</a>
+              </li>
+              <li class="nav-item">
+                	<a class="nav-link" href="social.html">Social Media</a>
+              </li>
+               <li class="nav-item">
+                	<a class="nav-link" href="links.htnml">Links</a>
+              </li>
+            </ul>
+        </nav>
+		<main>	
 		<div class="container-fluid mainMenu">
         <div class="row rowWrapper">
             <div class="col-md-2 light">
-			    <div class="well"> 
-				<p> <span class="specials"><br><br>Bayview BP:<br /> your neighborhood convenience store, gas station, and automotive repair center all in one. Auto repair, oil changes, and VA state inspections.</p>
+			    <div class="well"> <img src="BP_logo.png" class="bp" /> 
+				<p> <span class="specials">Bayview BP:<br /> your neighborhood convenience store, gas station, and automotive repair center all in one. Auto repair, oil changes, and VA state inspections.</p>
                 </div>
 			</div>
-			
            <div class="col-md-10">
                 <div class="row layer">
                      
@@ -91,7 +52,7 @@
                             <div class="well">
 							<p>Hours of operation <br />
 								Sun	7:00 am - 10:00 pm	<br />
-								<a class="nav-link" href="About.html">Check other days </a></p>
+								<a class="nav-link" href="aboutus.html">Check other days </a></p>
                             </div>
                        </div>
                         <div class="column col light">
@@ -121,7 +82,7 @@
                        </div>
                         <div class="column col light">
                             <div class="well">
-							<p><a class="nav-link" href="bp_appointments2.html">Schedule an appointment</a></p>					       
+							<p><a class="nav-link" href="appointments.html">Schedule an appointment</a></p>					       
                             </div>
 						</div>
 						<div class="column col dark">
@@ -133,7 +94,7 @@
                         <div class="well">
 						<p><p>"Super nice people!!<br />
                                      Good Service" <br />
-									<a class="nav-link" href="socialMedia.html">Read all reviews </a></p>
+									<a class="nav-link" href="social.html">Read all reviews </a></p>
                                     
                             </div>
                         </div>
@@ -141,9 +102,11 @@
                 </div>
             </div>
         </div>
-    </main>
-    </body>
-<footer>    
-    	
-	
+	</main>
+	<footer>
+		<div class="contacts">Call (757) 583-1355</div><div class="contacts"> 8595 Chesapeake Blvd, Norfolk </div> 
+		<div class="contacts"> bayviewbp@gmail.com</div>
+	</footer>
+    
+	</body>
 	</html>

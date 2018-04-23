@@ -17,7 +17,7 @@ li a {
     text-decoration: none;
 }
 li a:hover {
-    background-color: #009B00;
+    background-color: #1F2177;
 
 }
  		
@@ -34,7 +34,7 @@ h1,h2,h3,h4{
 /* basic menu styles */
 .block-menu {
 	display: block;
-	background: #009B00;
+	background: #1F2177;
 }
 
 .block-menu li {
@@ -100,7 +100,7 @@ h1,h2,h3,h4{
 	position: absolute;
 	top: 0;
 	left: 0;
-	background: #009B00;
+	background: #1F2177;
 	padding: 15px 10px;
 	color: white;
 	pointer-events: none;
@@ -417,10 +417,10 @@ div.w3-container img {
 .custInformation {
 	display: block;
 	position: absolute;
-	width: 30%;
-	left: 200px;
+	width: 35%;
+	left: 130px;
 	color: darkgreen;
-	font-size: 30px;
+	font-size: 10px;
 }
 #available {
 	font-family: 'Merienda';
