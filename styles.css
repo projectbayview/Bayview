@@ -14,7 +14,6 @@ nav, .dark, .wrapper-social, .container {
 
 
 
-
 .light {
 	background:#99cc00;
 }
@@ -27,7 +26,9 @@ a.nav-link:hover {
 	color: #FFFF00;
 	}
 	
-
+span.specials {
+	color: black;
+	}
 
 .mainMenu {
 	position:relative;
@@ -37,7 +38,7 @@ a.nav-link:hover {
 	width: 90%;
 	}
 	
-.cl-md-10, .rowWrapper, .mainMenu, .appointments {
+.cl-md-10, .containerMain, .mainMenu, .appointments {
 	min-height: 80vh;
 }
 
@@ -71,6 +72,7 @@ div.well {
   transform: translate(-50%, -50%);
 }
 
+
 .well, .review {
 	text-align: center;
 }
@@ -100,20 +102,116 @@ div.well {
 	background-size: cover;
 }
 
-/*  Footer  
+div.well {
+	width:100%;
+	height:100%;
+}
 
-footer.homefooter {
-	width: 90%;
+.disappear {
+opacity: 1;
+animation: appear 7s steps(4);
+animation-delay: 7s;
+
+}
+
+
+
+
+.breakfast{
+	background: url(breakfast.jpg);
+	background-size: cover;	
+    }
+	
+	
+.notebook{
+	background: url(notebook.jpg);
+	background-size: cover;
+	
+}
+.coolCar{
+	background: url(CoolCar.jpg);
+	background-size: cover;
+	}
+
+
+.girl{
+	background: url(girl.jpg);
+	background-size: cover;
+	}
+
+.coffee {
+	background: url(coffee.jpg);
+	background-size: cover;
+	animation: disappear 43s infinite;
+	animation-delay: 23s;
+	animation-direction: alternate;
+}
+
+.pontiac {
+	background: url(pontiac.jpg);
+	background-size: cover;
+	animation: disappear 43s infinite;
+	animation-delay: 13s;
+	animation-direction: alternate;
+}
+	
+.legs {
+	background: url(legs.jpg);
+	background-size: cover;
+	animation: disappear 43s infinite;
+	animation-delay: 33s;
+	animation-direction: alternate;
+	
+}
+
+.puppies {
+	background: url(dog.jpg);
+	background-size: cover;
+	animation: disappear 43s infinite;
+	animation-direction: alternate;
+	animation-delay: 3s;
+
+}
+
+
+	
+@keyframes disappear {
+  0%   { opacity: 1; }
+  43%, 100% { opacity: 0; }
+}
+
+
+
+
+.well a {
+	color: black;
+}
+
+
+
+@keyframes roll {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+
+
+footer {
+	width: 100%;
 	position:relative;
-padding-top: 5vh;
-margin: 0 auto;
 }
 
 footer.homefooter {
 	display: flex;
 	justify-content: space-between;
 }
-*/
+
 
 /*About*/
 
@@ -149,6 +247,12 @@ div.container-mainFacebook {
 
 /*Links*/
 
+.wrapper_background {
+	background: url(background.png);
+	background-size: cover;
+	z-index: -2;
+	}
+
 .well a:hover {
 	background-color:#99cc00;
 	}
@@ -167,7 +271,7 @@ width:95%;
 		text-align: center;
 			position:relative;
 	     top:3vh;
-		height:75vh;
+		height:65vh;
 		
 			}
 			
@@ -200,53 +304,5 @@ width:95%;
 	margin: 0 auto;
 }
 
-/*Specials*/
-div.well {
-	width:100%;
-	height:100%;
-}
 
-
-.coolCar{
-	background: url(CoolCar.jpg);
-	background-size: cover;
-}
-
-.girl{
-	background: url(girl.jpg);
-	background-size: cover;
-}
-.breakfast{
-	background: url(breakfast.jpg);
-	background-size: cover;
-}
-
-.notebook{
-	background: url(notebook.jpg);
-	background-size: cover;
-}
-
-.transparent {
-	animation: disappear 20s infinite;
-	}
-	
-@keyframes disappear {
-  0%   { opacity: 0; }
-  100% { opacity: 1; }
-}
-
-.well a {
-	color: black;
-}
-
-
-
-@keyframes roll {
-  0% {
-    transform: rotate(0);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
 
