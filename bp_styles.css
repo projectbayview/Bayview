@@ -1,4 +1,5 @@
 
+
 ul {
     list-style-type: none;
     margin: 0;
@@ -26,8 +27,9 @@ html, body {
     padding: 0;
     width:100%;
     height:100%;
+    background-size: 100% auto;
 }
-h1,h2,h3,h4{
+h1,h2,h3,h4 {
     margin: 0;
     padding: 0;
 }
@@ -167,7 +169,7 @@ div.w3-container img {
 	display: block;
 	width: 8%;
 	height: auto;
-	top: 385px;
+	top: 375px;
 	left: 5px;
 }
 #logos {
@@ -419,14 +421,33 @@ div.w3-container img {
 	position: absolute;
 	width: 30%;
 	left: 200px;
-	color: darkgreen;
+	color: black;
 	font-size: 30px;
 }
+
+.custInformation2 {
+	display: block;
+	position: absolute;
+	width: 30%;
+	right: 200px;
+	color: black;
+	font-size: 30px;
+}
+.lastfooter {
+	display: block;
+	position: absolute;
+	width: 100%;
+	top: 2000px;
+	font-size: 20px;
+	font-family; sans-serif;
+	background-color: #009B00;
+	}
+
 #available {
 	font-family: 'Merienda';
 	font-size: 30px;
 	text-shadow: 2px 2px green;
-	color: yellow;
+	color: black;
 }
 
 nav {
